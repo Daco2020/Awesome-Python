@@ -35,4 +35,4 @@ if __name__ == "__main__":
     start = time.time()
     main()
     end = time.time()
-    print(end - start)  # 일반
+    print(end - start)
