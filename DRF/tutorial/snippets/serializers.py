@@ -3,18 +3,19 @@ from snippets.models import Snippet
 from django.contrib.auth.models import User
 
 
-class SnippetSerializer(serializers.ModelSerializer):
-    # ReadOnlyField : 유형이 지정되지 않은 것은 항상 읽기 전용이며 직렬화된 표현에 사용되지만 모델 업데이트에는 사용되지 않음
+class SnippetSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
+    highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
     
     class Meta:
         model = Snippet
-        fields = ['id', 'title', 'code', 'linenos', 'language', 'style', 'owner']
+        fields = ['url', 'id', 'highlight', 'owner',
+                'title', 'code', 'linenos', 'language', 'style']
         
 
-class UserSerializer(serializers.ModelSerializer):
-    snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    snippets = serializers.HyperlinkedRelatedField(many=True, view_name='snippet-detail', read_only=True)
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'snippets']
+        fields = ['url', 'id', 'username', 'snippets']
