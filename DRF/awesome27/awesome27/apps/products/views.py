@@ -7,4 +7,3 @@ from awesome27.apps.products.serializers import MessageSerializer
 class MessageViewSet(viewsets.ModelViewSet):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
-    # http_method_names = ['get', 'post', 'delete']
