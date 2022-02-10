@@ -9,26 +9,26 @@ import requests
 import time
 
 
-def fetcher(session, url):
-    with session.get(url) as response:
-        return response.text
+# def fetcher(session, url):
+#     with session.get(url) as response:
+#         return response.text
 
 
-def main():
-    urls = ["https://naver.com", "https://google.com", "https://daum.net"] * 10
+# def main():
+#     urls = ["https://naver.com", "https://google.com", "https://daum.net"] * 10
 
-    with requests.Session() as session:
-        result = [fetcher(session, url) for url in urls]
-        print(result)
+#     with requests.Session() as session:
+#         result = [fetcher(session, url) for url in urls]
+#         print(result)
 
 
-if __name__ == "__main__":
-    start = time.time()
-    main()
-    end = time.time()
-    print(end - start)
+# if __name__ == "__main__":
+#     start = time.time()
+#     main()
+#     end = time.time()
+#     print(end - start)
 
-# >>> 15.04025387763977 초
+# # >>> 15.04025387763977 초
 
 
 '''
