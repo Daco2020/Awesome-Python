@@ -45,6 +45,9 @@ class Robot:
     # 스태틱 메서드
     @staticmethod
     def time():
+        '''
+        cls(클래스)도 self(인스턴스) 모두 사용하지 않고 호출하고 싶은 경우.
+        '''
         return f"The current time is {datetime.datetime.now()}."
         
 siri = Robot('siri')
