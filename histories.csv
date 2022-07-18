@@ -1,0 +1,2 @@
+event,status,success,fails
+subscribe-status,ok,"[{'symbol': 'RTSI', 'exchange': 'MOEX', 'mic_code': 'MOEX', 'country': 'Russia', 'type': 'Index'}, {'symbol': 'N225', 'exchange': 'JPX', 'mic_code': 'JPX', 'country': 'Japan', 'type': 'Index'}, {'symbol': 'CASE30', 'exchange': 'EGX', 'mic_code': 'EGX', 'country': 'Egypt', 'type': 'Index'}, {'symbol': 'TWII', 'exchange': 'TWSE', 'mic_code': 'TWSE', 'country': 'Taiwan', 'type': 'Index'}]",
