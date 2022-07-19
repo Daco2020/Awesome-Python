@@ -4,12 +4,7 @@ import json
 import websockets
 import env as e
 
-# PARAMS = {
-#     "action": "subscribe",
-#     "params": {
-# 	"symbols": "RTSI,N225,CASE30,TWII"
-#     }
-# }
+
 async def run():
     _ws = await websockets.connect(e.url, ping_interval=10)
     await _ws.send(json.dumps(e.PARAMS1))
