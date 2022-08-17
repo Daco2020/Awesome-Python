@@ -1,5 +1,6 @@
 import datetime
 import time
+
 # from datetime import datetime, timedelta
 
 import pytz
@@ -19,31 +20,35 @@ import pytz
 
 # c = "2022-11-11"
 
-q = "2022-08-03"
-c = datetime.datetime.strptime(q, "%Y-%m-%d").date()
-print(type(str(c)))
-dt = datetime.datetime.fromtimestamp(
-    int(time.time()),
-    pytz.timezone("America/New_York"),
-),
-print(dt)
-print(int(time.time())*1000,)
+# q = "2022-08-03"
+# c = datetime.datetime.strptime(q, "%Y-%m-%d").date()
+# print(type(str(c)))
+# dt = datetime.datetime.fromtimestamp(
+#     int(time.time()),
+#     pytz.timezone("America/New_York"),
+# ),
+# print(dt)
+# print(int(time.time())*1000,)
 
-d = datetime.date.today()
-print(d)
+# d = datetime.date.today()
+# print(d)
 
-dt = pytz.timezone("UTC")
-print(type(dt))
+# dt = pytz.timezone("UTC")
+# print(type(dt))
 
 
-a = {"code": {}}
-a["code"]["v"] = 0
-print(a)
+# a = {"code": {}}
+# a["code"]["v"] = 0
+# print(a)
 
-a = False
-if a:
-    print(1)
-if not a:
-    print(2)
-if a is None:
-    print(3)
+# a = False
+# if a:
+#     print(1)
+# if not a:
+#     print(2)
+# if a is None:
+#     print(3)
+
+a = datetime.datetime(2022, 8, 9, 12, 17)
+print(a.tzinfo) 
+>>> None
